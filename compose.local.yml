@@ -28,6 +28,8 @@ services:
     ports:
       - "8080:8080"
 
+    volumes:
+      - ./public:/app/public
     # Environment variables passed into the container.
     # PORT tells server.js which port to listen on.
     environment:
