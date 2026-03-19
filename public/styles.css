@@ -1,0 +1,218 @@
+/* ----------------------------------------------------------------
+   Base styles — you don't need to edit this section for Parts 1-2.
+   ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+/* ================================================================
+   Home page styles
+   ================================================================ */
+
+body.home-page {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  background: orange;
+  justify-content: left;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.nav-links.push-right {
+  margin-left: auto;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  background: orange;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: #2563eb;
+}
+
+.student-banner {
+  width: 100%;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background: orange;
+  color: white;
+}
+
+.student-banner h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.student-banner .tagline {
+  font-size: 1.15rem;
+}
+
+.tagline-code {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.content {
+  max-width: 680px;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 0.85rem;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.card p,
+.card li {
+  color: #334155;
+  line-height: 1.7;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+.card li {
+  margin-bottom: 0.3rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #14532d;
+  color: #86efac;
+  border: 1px solid #16a34a;
+  border-radius: 9999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.hint {
+  margin-top: 0.9rem;
+  background: #f1f5f9;
+  border: 2px dashed #94a3b8;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+code {
+  background: #f1f5f9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.3rem;
+  font-family: "Menlo", "Consolas", monospace;
+  color: #b45309;
+  font-size: 0.9em;
+}
+
+/* ================================================================
+   Page 1 styles
+   ================================================================ */
+
+body.page-one {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(180deg, #fef6e4, #dff3ff);
+  color: #1d3557;
+}
+
+.page-shell {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+body.page-one .card {
+  width: min(90vw, 520px);
+  padding: 2rem;
+  border-radius: 28px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 60px rgba(32, 56, 85, 0.18);
+  backdrop-filter: blur(10px);
+  border: 0;
+  margin-bottom: 0;
+}
+
+body.page-one h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+body.page-one p {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+}
+
+.spin-frame {
+  width: min(68vw, 280px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 14px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #ffd6a5);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+.spin-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
