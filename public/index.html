@@ -1,115 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Deploy Now Workshop</title>
-    <style>
-        /* ----------------------------------------------------------------
-           Base styles — you don't need to edit this section for Parts 1-2.
-           ---------------------------------------------------------------- */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ================================================================
-           STUDENT EDIT ZONE styles
-           These styles control the big banner at the top of the page.
-           ✏️ You can change the background color, font size, etc.
-           ================================================================ */
-        .student-banner {
-            width: 100%;
-            padding: 2.5rem 1rem;
-            text-align: center;
-
-            /* ✏️ CHANGE THIS COLOR to personalize your deployment!
-               Try: #b91c1c (red), #15803d (green), #7e22ce (purple)  */
-            background: orange;
-
-            color: white;
-        }
-
-        .student-banner h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .student-banner .tagline {
-            font-size: 1.15rem;
-        }
-        /* ================================================================
-           END STUDENT EDIT ZONE styles
-           ================================================================ */
-
-        /* Workshop info below — no need to edit */
-        .content {
-            max-width: 680px;
-            width: 100%;
-            padding: 2rem 1rem;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card h2 {
-            font-size: 0.85rem;
-            color: #475569;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.75rem;
-        }
-
-        .card p, .card li { color: #334155; line-height: 1.7; }
-        .card ul { padding-left: 1.25rem; }
-        .card li { margin-bottom: 0.3rem; }
-
-        .badge {
-            display: inline-block;
-            background: #14532d;
-            color: #86efac;
-            border: 1px solid #16a34a;
-            border-radius: 9999px;
-            padding: 0.2rem 0.65rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.6rem;
-        }
-
-        .hint {
-            margin-top: 0.9rem;
-            background: #f1f5f9;
-            border: 2px dashed #94a3b8;
-            border-radius: 0.5rem;
-            padding: 0.8rem 1rem;
-            font-size: 0.85rem;
-            color: #475569;
-        }
-
-        code {
-            background: #f1f5f9;
-            padding: 0.15rem 0.4rem;
-            border-radius: 0.3rem;
-            font-family: 'Menlo', 'Consolas', monospace;
-            color: #b45309;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+
+<body class="home-page">
 
     <!-- ================================================================
          👋 STUDENT EDIT ZONE — CHANGE THIS SECTION!
@@ -128,8 +27,16 @@
 
     <div class="student-banner">
         <h1>👋 Hello from <strong>Benjamin No</strong>!</h1>
-        <p class="tagline">This a test to see what happens <code style="background:rgba(255,255,255,0.2);color:#fff;">public/index.html</code> and push to make this yours.</p>
+        <p class="tagline">This a test to see what happens! <code class="tagline-code">public/index.html</code> and push to make this
+            yours.</p>
     </div>
+
+    <nav class="navbar" aria-label="Primary">
+        <ul class="nav-links push-right">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/page1.html">Go to Page 1</a></li>
+        </ul>
+    </nav>
 
     <!-- ================================================================
          END OF STUDENT EDIT ZONE
@@ -141,7 +48,8 @@
         <div class="card">
             <span class="badge">✅ Deployed Successfully</span>
             <h2>Your App is Live</h2>
-            <p>If you can read this, your deployment worked. This page is being served by a Node.js + Express app running inside a Docker container.</p>
+            <p>If you can read this, your deployment worked. This page is being served by a Node.js + Express app
+                running inside a Docker container.</p>
             <div class="hint">
                 💡 <strong>Next:</strong> Edit <code>public/index.html</code>, change the name above,
                 then push to GitHub. Render will redeploy automatically.
@@ -170,4 +78,5 @@
     </main>
 
 </body>
+
 </html>
